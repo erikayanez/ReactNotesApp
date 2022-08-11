@@ -27,8 +27,16 @@ function App() {
       date: "10/08/2022"
     },
   ]);
+
   const [searchText, setSearchText] = useState('');
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedNotes  = JSON.parse(localStorage.getItem('react-notes-app-data'));
+    if(savedNotes){
+      setNotes(savedNotes)
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('react-notes-app-data', JSON.stringify(notes));

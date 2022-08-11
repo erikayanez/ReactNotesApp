@@ -1,7 +1,8 @@
 import React from 'react'
 import Note from './Note'
+import AddNote from './AddNote';
 
-export default function NotesList({ notes, handleDeleteNote}) {
+export default function NotesList({ notes, handleDeleteNote, handleAddNote}) {
 
     return (
     <div className='notes-list'>
@@ -13,6 +14,7 @@ export default function NotesList({ notes, handleDeleteNote}) {
         handleDeleteNote={handleDeleteNote}
         />
         ))}
+        <AddNote handleAddNote={handleDeleteNote} />
     </div>
 )
 }

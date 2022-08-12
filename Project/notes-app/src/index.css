@@ -35,7 +35,7 @@ code {
   min-height: 100vh;
 }
 
-.note-list {
+.notes-list {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
